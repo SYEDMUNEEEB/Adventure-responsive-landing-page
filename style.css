@@ -296,7 +296,16 @@ margin-top: -900px;
       
     }
     .col img {
-        width: 10rem;
+        display: flex;
+        flex-direction: column;
+       
+    }
+    section.Event .row {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+        flex-direction: column;
     }
     .col p{
         font-size: 14px;
@@ -438,9 +447,7 @@ margin-top: -900px;
 
 /* Hover Effects */
 
-.col:hover {
-    background-color: #f1f1f1;
-}
+
 
 .col:hover h4 {
     color: crimson;
@@ -451,7 +458,38 @@ margin-top: -900px;
 .fade-in {
     animation: fade-in 1s ease-in-out;
 }
+img{
+    transition: transform .3s ease;
+    cursor: pointer;
+}
+img:hover{
+    transform: scale(1.1);
+}
+.col:hover img {
+    transform: scale(1.1);
+}
 
+.col:hover h4 {
+    color: crimson;
+}
+
+/* Gradient Text */
+
+.gradient-text {
+    background: -webkit-linear-gradient(to right, crimson, #ff5733);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Fade In Animation */
+
+.fade-in {
+    animation: fade-in 1s ease-in-out;
+}
+
+img {
+    transition: transform.3s ease;
+}
 @keyframes fade-in {
     0% {
         opacity: 0;
